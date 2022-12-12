@@ -1,0 +1,43 @@
+
+.calcGrid{
+    display:grid;
+    width: 500px;
+    height:700px;
+    position: relative;
+    grid-template-columns: repeat(4, 500px/4);
+    grid-template-rows: repeat(6, 600px/6);
+    margin-right: auto;
+    margin-left: auto;
+}
+.span-2{
+    grid-column: span 2;
+}
+#window{
+    color: white;
+    grid-column: span 4;
+    background-color: black;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    font-size: 2rem;
+    word-wrap: break-word; /* stays inside window*/
+    word-break: break-all;/* breaks words at any point */
+    padding: 10px; /* padding for text */
+}
+
+button{
+    background-color: cream;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#window .previous{
+    font-size: 2rem;
+}
+#window .current{
+    font-size: 4rem;
+}
