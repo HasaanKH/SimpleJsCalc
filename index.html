@@ -7,34 +7,35 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
+    <!-- defer is used to load the script after the page is loaded -->
   </head>
   <body>
     <div class="calcGrid">
       <!--Grid container-->
       <div id="window">
-        <div class="previous">10 +</div>
-        <div class="current">1000</div>
+        <div id="previous" data-previous></div>
+        <div id="current" data-current></div>
       </div>
-      <button>AC</button>
-      <button>+/-</button>
-      <button>%</button>
-      <button>/</button>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button>x</button>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button>-</button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>+</button>
-      <button class="span-2">0</button>
-      <button>.</button>
-      <button>=</button>
+      <button data-ac>AC</button>
+      <button data-op>+/-</button>
+      <button data-op>%</button>
+      <button data-op>/</button>
+      <button data-num>7</button>
+      <button data-num>8</button>
+      <button data-num>9</button>
+      <button data-op>x</button>
+      <button data-num>4</button>
+      <button data-num>5</button>
+      <button data-num>6</button>
+      <button data-op>-</button>
+      <button data-num>1</button>
+      <button data-num>2</button>
+      <button data-num>3</button>
+      <button data-op>+</button>
+      <button class="span-2" data-num>0</button>
+      <button data-num>.</button>
+      <button data-equals>=</button>
     </div>
   </body>
 </html>
