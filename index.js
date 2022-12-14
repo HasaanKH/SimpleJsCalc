@@ -21,6 +21,7 @@ class Calculator{
         this.currentLineConstruct.innerText = this.currentOperand;
     }
     appendOperator(operator){
+        if(this.currentOperand === '') return;
         if(this.Operation === null) {
             this.currentOperand = this.currentOperand +' ' + operator.toString();
             this.previousLineConstruct.innerText = this.currentOperand;

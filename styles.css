@@ -2,16 +2,19 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
 }
 .calcGrid{
     display:grid;
     width: 500px;
-    height:700px;
+    min-height:100vh;
     position: relative;
-    grid-template-columns: repeat(4, 500px/4);
-    grid-template-rows: repeat(7, 700px/6);
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(130px, auto) repeat(5, 100px);
     margin-right: auto;
     margin-left: auto;
+    grid-gap: 3px;
+    align-content: center;
 }
 .span-2{
     grid-column: span 2;
@@ -20,7 +23,6 @@
     color: white;
     grid-column: span 4;
     background-color: black;
-    grid-row: span 3;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
