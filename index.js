@@ -27,6 +27,13 @@ class Calculator{
             this.Operation = operator;
             this.currentOperand = '';
         }
+        else {
+            this.compute();
+            this.currentOperand = this.currentOperand +' ' + operator.toString();
+            this.previousLineConstruct.innerText = this.currentOperand;
+            this.Operation = operator;
+            this.currentOperand = '';
+        }
     }
     compute(){
         switch(this.Operation){
@@ -42,6 +49,8 @@ class Calculator{
             case '/':
                 this.currentOperand = parseFloat(this.previousLineConstruct.innerText) / parseFloat(this.currentOperand);
                 break;
+            case '%':
+                this.currentOperand = parseFloat(this.previousLineConstruct.innerText) * 0.01 * parseFloat(this.currentOperand);
         }
         this.previousLineConstruct.innerText = '';
         this.Operation = null;
